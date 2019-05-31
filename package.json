@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/PuttingTheDnDInTDD/EverCraft-Kata#readme",
   "devDependencies": {
-    "karma": "^4.1.0"
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1"
   }
 }

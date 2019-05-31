@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed Feb 06 2019 08:46:05 GMT-0500 (Eastern Standard Time)
+// Generated on Fri May 31 2019 10:29:05 GMT-0400 (Eastern Daylight Time)
 
 module.exports = function(config) {
   config.set({
@@ -12,19 +12,24 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-
+    /**
+     * not sure these file paths are legit
+     */
     // list of files / patterns to load in the browser
-    files: ["src/*.js", "tests/*.spec.js"],
-
-    // list of plugins
-    plugins: [
-      require("karma-chrome-launcher"),
-      require("karma-jasmine"),
-      require("karma-spec-reporter")
+    files: [
+      '"./tests/**/*spec.js"',
+      '"./tests/*spec.js"',
+      '"./tests/*Spec.js"',
+      '"tests/*Spec.js"',
+      'putting-the-dnd-in-tdd/EverCraft-Kata/tests',
+      '"./EverCraft-Kata/tests/*.spec.js"',
+      '"./tests/*.spec.js"',
+      '"./tests/**.spec.js"',
+      '"tests/**.spec.js"'
     ],
 
 
-    // list of files to exclude
+    // list of files / patterns to exclude
     exclude: [
     ],
 
