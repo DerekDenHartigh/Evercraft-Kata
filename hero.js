@@ -24,6 +24,38 @@ class Hero {
         //     throw error;
         //     };
         // }
+
+        this.armor = (newArmorRating)=>{ // gives armor of 10 if string or empty, otherwise assigns new armor rating
+                if(!newArmorRating){
+                    return this._armor = 10;
+                } else {
+                    if(isNaN(newArmorRating) === false){
+                    return this._armor = newArmorRating;
+                    }
+                    else{
+                        return this._armor=10;
+                    }
+                }
+        };
+
+        this.hp = (newHpRating)=>{ // gives hp of 10 if string or empty, otherwise assigns new hp rating
+            if(newHpRating===0){
+                console.log("U R Ded!")
+                return 0;
+            } else if(!newHpRating) {
+                return this._hp = 5;
+            }  
+            else {
+                if(isNaN(newHpRating) === false){
+                return this._hp = newHpRating;
+                }
+                else{
+                    return this._hp=5;
+                }
+            }
+    };
+
+
     }
 
     get name (){
@@ -31,7 +63,7 @@ class Hero {
     }
 
     set name(newName){
-        this._name = newName;
+        return this._name = newName;
     }
 
     get alignment (){
@@ -48,21 +80,21 @@ class Hero {
         }
     }
 
-    get armor(){
-        return this._armor = 10;
-    }
+    // get armor(){
+    //     return this._armor = 10;
+    // }
 
-    set armor(newArmorRating){
-        return this._armor = newArmorRating;
-    }
+    // set armor(newArmorRating){
+    //     return this._armor = newArmorRating;
+    // }
 
-    get hp(){
-        return this._hp = 5;
-    }
+    // get hp(){
+    //     return this._hp = 5;
+    // }
 
-    set hp(newHpRating){
-        return this._hp = newHpRating;
-    }
+    // set hp(newHpRating){
+    //     return this._hp = newHpRating;
+    // }
 }
 
 module.exports= Hero;

@@ -40,13 +40,30 @@ describe("Hero", ()=> {
 
     describe("hero's armor", ()=>{
         it("default armor = 10", ()=>{
-            expect(this.hero.armor).toBe(10);
-        })
+            expect(this.hero.armor()).toEqual(10);
+        });
+
+        it("armor updates to 30", ()=>{
+            expect(this.hero.armor(30)).toEqual(30);
+        });
+        it("armor shouldn't update to zebra", ()=>{
+            expect(this.hero.armor("zebra")).toBe(10);
+        });
     });
  
     describe("hero's hp", ()=>{
         it("default hp = 5", ()=>{
-            expect(this.hero.hp).toBe(5);
+            expect(this.hero.hp()).toEqual(5);
+        });
+
+        it("hp updates to 30", ()=>{
+            expect(this.hero.hp(30)).toEqual(30);
+        });
+        it("hp shouldn't update to zebra", ()=>{
+            expect(this.hero.hp("zebra")).toBe(5);
+        });
+        it("hp should return 0 w/ U R ded message if your hp = 0", ()=>{
+            expect(this.hero.hp(0)).toBe(0);
         })
     });
   
