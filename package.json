@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/PuttingTheDnDInTDD/EverCraft-Kata/issues"
   },
-  "homepage": "https://github.com/PuttingTheDnDInTDD/EverCraft-Kata#readme"
+  "homepage": "https://github.com/PuttingTheDnDInTDD/EverCraft-Kata#readme",
+  "devDependencies": {
+    "karma": "^4.1.0"
+  }
 }
