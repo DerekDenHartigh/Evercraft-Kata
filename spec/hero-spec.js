@@ -3,6 +3,7 @@ describe("Hero", ()=> {
   
     beforeEach(()=>{
         this.hero = new Hero();
+        this.opponent = new Hero();
     });
 
     describe("hero's name", ()=>{
@@ -66,6 +67,15 @@ describe("Hero", ()=> {
             expect(this.hero.hp(0)).toBe(0);
         })
     });
+
+    describe("combat time", ()=>{
+        it("hero attcking unarmored opponent, reduces their hp if attack meets/beats opponent armor class", ()=>{
+            this.hero.attack(5);
+            this.opponent.hp = 10;
+            this.opponent.armor = 5;
+            expect(this.opponent.hp).toBe(5);
+        })
+    })
   
   });
   

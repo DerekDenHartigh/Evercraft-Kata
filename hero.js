@@ -55,6 +55,10 @@ class Hero {
             }
     };
 
+        this.attack = (attackDamage)=>{
+            
+        }
+
 
     }
 
